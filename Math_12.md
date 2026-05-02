@@ -1,34 +1,34 @@
-# Toan 12 Core - Cong thuc va cach dung nhanh
+# Toán 12 Core - Công thức và cách dùng nhanh
 
-Tai lieu nay gom nhung cong thuc cot loi de xu ly phan lon bai Toan 12. Muc tieu khong phai la hoc thuoc tat ca mot luc, ma la biet:
+Tài liệu này gom những công thức cốt lõi để xử lý phần lớn bài Toán 12. Mục tiêu không phải là học thuộc tất cả một lúc, mà là biết:
 
-- Bai dang nao thi dung cong cu nao.
-- Cong thuc nao la "xong viec" nhanh nhat.
-- Can kiem tra dieu kien gi de tranh sai.
+- Bài dạng nào thì dùng công cụ nào.
+- Công thức nào là công thức "áp vào là ra".
+- Cần kiểm tra điều kiện gì để tránh sai.
 
-> Cach hoc nhanh: doc moi muc theo thu tu **Nhan dang bai -> Cong thuc -> Quy trinh lam**. Khi lam bai, quay lai dung muc lien quan, khong can nho het ngay tu dau.
+> Cách học nhanh: đọc mỗi mục theo thứ tự **nhận dạng bài -> công thức -> quy trình làm**. Khi làm bài, quay lại đúng mục liên quan, không cần nhớ hết ngay từ đầu.
 
-## Muc luc
+## Mục lục
 
-- [1. Dao ham va nguyen ham](#1-dao-ham-va-nguyen-ham)
-- [2. Khao sat ham so](#2-khao-sat-ham-so)
-- [3. Tiem can](#3-tiem-can)
-- [4. Tich phan va ung dung](#4-tich-phan-va-ung-dung)
-- [5. Vecto trong khong gian](#5-vecto-trong-khong-gian)
-- [6. Toa do Oxyz](#6-toa-do-oxyz)
-- [7. Mat phang, duong thang, mat cau](#7-mat-phang-duong-thang-mat-cau)
-- [8. Mu, logarit va so phuc](#8-mu-logarit-va-so-phuc)
-- [9. Checklist lam bai](#9-checklist-lam-bai)
+- [1. Đạo hàm và nguyên hàm](#1-đạo-hàm-và-nguyên-hàm)
+- [2. Khảo sát hàm số](#2-khảo-sát-hàm-số)
+- [3. Tiệm cận](#3-tiệm-cận)
+- [4. Tích phân và ứng dụng](#4-tích-phân-và-ứng-dụng)
+- [5. Vectơ trong không gian](#5-vectơ-trong-không-gian)
+- [6. Tọa độ Oxyz](#6-tọa-độ-oxyz)
+- [7. Mặt phẳng, đường thẳng, mặt cầu](#7-mặt-phẳng-đường-thẳng-mặt-cầu)
+- [8. Mũ, logarit và số phức](#8-mũ-logarit-và-số-phức)
+- [9. Checklist làm bài](#9-checklist-làm-bài)
 
-## 1. Dao ham va nguyen ham
+## 1. Đạo hàm và nguyên hàm
 
-Dao ham dung de tim tang giam, cuc tri, min-max, tiep tuyen, khao sat do thi. Nguyen ham va tich phan dung de tinh dien tich, the tich, gia tri trung binh.
+Đạo hàm dùng để tìm tăng giảm, cực trị, min-max, tiếp tuyến, khảo sát đồ thị. Nguyên hàm và tích phân dùng để tính diện tích, thể tích, giá trị trung bình.
 
-### 1.1 Quy tac dao ham
+### 1.1 Quy tắc đạo hàm
 
-Voi $u = u(x)$, $v = v(x)$ la cac ham kha vi:
+Với $u = u(x)$, $v = v(x)$ là các hàm khả vi:
 
-| Dang | Dao ham |
+| Dạng | Đạo hàm |
 |---|---:|
 | $(u + v)'$ | $u' + v'$ |
 | $(u - v)'$ | $u' - v'$ |
@@ -37,9 +37,9 @@ Voi $u = u(x)$, $v = v(x)$ la cac ham kha vi:
 | $\left(\dfrac{u}{v}\right)'$ | $\dfrac{u'v - uv'}{v^2}$ |
 | $(f(u))'$ | $f'(u)u'$ |
 
-### 1.2 Bang dao ham can nho
+### 1.2 Bảng đạo hàm cần nhớ
 
-| Ham so | Dao ham |
+| Hàm số | Đạo hàm |
 |---|---:|
 | $x^n$ | $nx^{n-1}$ |
 | $\dfrac{1}{x}$ | $-\dfrac{1}{x^2}$ |
@@ -53,9 +53,9 @@ Voi $u = u(x)$, $v = v(x)$ la cac ham kha vi:
 | $\tan x$ | $\dfrac{1}{\cos^2 x}$ |
 | $\cot x$ | $-\dfrac{1}{\sin^2 x}$ |
 
-Voi ham hop, thay $x$ bang $u$ va nhan them $u'$:
+Với hàm hợp, thay $x$ bằng $u$ và nhân thêm $u'$:
 
-| Ham hop | Dao ham |
+| Hàm hợp | Đạo hàm |
 |---|---:|
 | $u^n$ | $nu^{n-1}u'$ |
 | $e^u$ | $u'e^u$ |
@@ -65,9 +65,9 @@ Voi ham hop, thay $x$ bang $u$ va nhan them $u'$:
 | $\cos u$ | $-u'\sin u$ |
 | $\tan u$ | $\dfrac{u'}{\cos^2 u}$ |
 
-### 1.3 Bang nguyen ham can nho
+### 1.3 Bảng nguyên hàm cần nhớ
 
-| Ham so | Nguyen ham |
+| Hàm số | Nguyên hàm |
 |---|---:|
 | $x^\alpha$, $\alpha \ne -1$ | $\displaystyle\int x^\alpha\,dx = \dfrac{x^{\alpha+1}}{\alpha+1} + C$ |
 | $\dfrac{1}{x}$ | $\displaystyle\int \dfrac{1}{x}\,dx = \ln\lvert x\rvert + C$ |
@@ -78,9 +78,9 @@ Voi ham hop, thay $x$ bang $u$ va nhan them $u'$:
 | $\dfrac{1}{\cos^2 x}$ | $\displaystyle\int \dfrac{1}{\cos^2 x}\,dx = \tan x + C$ |
 | $\dfrac{1}{\sin^2 x}$ | $\displaystyle\int \dfrac{1}{\sin^2 x}\,dx = -\cot x + C$ |
 
-Neu gap ham hop tuyen tinh $ax+b$, thuong chia them cho he so $a$:
+Nếu gặp hàm hợp tuyến tính $ax+b$, thường chia thêm cho hệ số $a$:
 
-| Dang | Nguyen ham |
+| Dạng | Nguyên hàm |
 |---|---:|
 | $(ax+b)^\alpha$, $\alpha \ne -1$ | $\dfrac{(ax+b)^{\alpha+1}}{a(\alpha+1)} + C$ |
 | $\dfrac{1}{ax+b}$ | $\dfrac{1}{a}\ln\lvert ax+b\rvert + C$ |
@@ -88,222 +88,224 @@ Neu gap ham hop tuyen tinh $ax+b$, thuong chia them cho he so $a$:
 | $\sin(ax+b)$ | $-\dfrac{1}{a}\cos(ax+b) + C$ |
 | $\cos(ax+b)$ | $\dfrac{1}{a}\sin(ax+b) + C$ |
 
-## 2. Khao sat ham so
+## 2. Khảo sát hàm số
 
-Day la dang bai trung tam cua Toan 12. Gan nhu moi cau deu xoay quanh $y'$, dau cua $y'$ va gia tri cua $y$ tai cac diem dac biet.
+Đây là dạng bài trung tâm của Toán 12. Gần như mọi câu đều xoay quanh $y'$, dấu của $y'$ và giá trị của $y$ tại các điểm đặc biệt.
 
-### 2.1 Quy trinh chuan
+### 2.1 Quy trình chuẩn
 
-1. Tim tap xac dinh $D$.
-2. Tinh $y'$.
-3. Giai $y' = 0$ va tim cac diem $y'$ khong xac dinh neu co.
-4. Lap bang bien thien: chia truc so theo cac diem vua tim, xet dau $y'$.
-5. Ket luan dong bien, nghich bien, cuc tri, min-max, tiem can, do thi.
+1. Tìm tập xác định $D$.
+2. Tính $y'$.
+3. Giải $y' = 0$ và tìm các điểm $y'$ không xác định nếu có.
+4. Lập bảng biến thiên: chia trục số theo các điểm vừa tìm, xét dấu $y'$.
+5. Kết luận đồng biến, nghịch biến, cực trị, min-max, tiệm cận, đồ thị.
 
-### 2.2 Don dieu
+### 2.2 Đơn điệu
 
-| Dieu kien | Ket luan |
+| Điều kiện | Kết luận |
 |---|---|
-| $y' > 0$ tren khoang | Ham so dong bien tren khoang do |
-| $y' < 0$ tren khoang | Ham so nghich bien tren khoang do |
-| $y'$ doi dau tu $+$ sang $-$ tai $x_0$ | $x_0$ la diem cuc dai |
-| $y'$ doi dau tu $-$ sang $+$ tai $x_0$ | $x_0$ la diem cuc tieu |
+| $y' > 0$ trên khoảng | Hàm số đồng biến trên khoảng đó |
+| $y' < 0$ trên khoảng | Hàm số nghịch biến trên khoảng đó |
+| $y'$ đổi dấu từ $+$ sang $-$ tại $x_0$ | $x_0$ là điểm cực đại |
+| $y'$ đổi dấu từ $-$ sang $+$ tại $x_0$ | $x_0$ là điểm cực tiểu |
 
 ### 2.3 Min-max
 
-Voi bai tim gia tri lon nhat, nho nhat tren doan $[a;b]$:
+Với bài tìm giá trị lớn nhất, nhỏ nhất trên đoạn $[a;b]$:
 
-1. Tinh $y'$.
-2. Giai $y'=0$ trong $(a;b)$.
-3. Tinh $f(a)$, $f(b)$ va $f(x_i)$ voi cac nghiem $x_i$.
-4. So sanh cac gia tri vua tinh.
+1. Tính $y'$.
+2. Giải $y'=0$ trong $(a;b)$.
+3. Tính $f(a)$, $f(b)$ và $f(x_i)$ với các nghiệm $x_i$.
+4. So sánh các giá trị vừa tính.
 
-Ket luan:
+Kết luận:
 
-- So lon nhat la $\max f(x)$.
-- So nho nhat la $\min f(x)$.
+- Số lớn nhất là $\max f(x)$.
+- Số nhỏ nhất là $\min f(x)$.
 
-### 2.4 Tiep tuyen
+### 2.4 Tiếp tuyến
 
-Phuong trinh tiep tuyen cua do thi $y=f(x)$ tai $x=x_0$:
+Phương trình tiếp tuyến của đồ thị $y=f(x)$ tại $x=x_0$:
 
 $$
 y = f'(x_0)(x-x_0) + f(x_0).
 $$
 
-Neu de bai cho hoanh do tiep diem, thay truc tiep vao. Neu de bai cho he so goc $k$, giai $f'(x)=k$ de tim tiep diem.
+Nếu đề bài cho hoành độ tiếp điểm, thay trực tiếp vào. Nếu đề bài cho hệ số góc $k$, giải $f'(x)=k$ để tìm tiếp điểm.
 
-## 3. Tiem can
+## 3. Tiệm cận
 
-Tiem can giup nhin hinh dang do thi khi $x$ tien ra vo cuc hoac tien den diem lam ham "no tung".
+Tiệm cận giúp nhìn hình dạng đồ thị khi $x$ tiến ra vô cực hoặc tiến đến điểm làm hàm không xác định.
 
-| Loai tiem can | Cach tim |
+| Loại tiệm cận | Cách tìm |
 |---|---|
-| Tiem can dung $x=x_0$ | Neu $\lim\limits_{x\to x_0^+}f(x)=\pm\infty$ hoac $\lim\limits_{x\to x_0^-}f(x)=\pm\infty$ |
-| Tiem can ngang $y=y_0$ | Neu $\lim\limits_{x\to\pm\infty}f(x)=y_0$ |
-| Tiem can xien $y=ax+b$ | Neu $\lim\limits_{x\to\pm\infty}[f(x)-(ax+b)]=0$ |
+| Tiệm cận đứng $x=x_0$ | Nếu $\lim\limits_{x\to x_0^+}f(x)=\pm\infty$ hoặc $\lim\limits_{x\to x_0^-}f(x)=\pm\infty$ |
+| Tiệm cận ngang $y=y_0$ | Nếu $\lim\limits_{x\to\pm\infty}f(x)=y_0$ |
+| Tiệm cận xiên $y=ax+b$ | Nếu $\lim\limits_{x\to\pm\infty}[f(x)-(ax+b)]=0$ |
 
-Voi tiem can xien:
+Với tiệm cận xiên:
 
 $$
-a=\lim_{x\to\pm\infty}\frac{f(x)}{x},\qquad
-b=\lim_{x\to\pm\infty}\left[f(x)-ax\right].
+\begin{aligned}
+a &= \lim_{x\to\pm\infty}\frac{f(x)}{x},\\
+b &= \lim_{x\to\pm\infty}\left[f(x)-ax\right].
+\end{aligned}
 $$
 
-## 4. Tich phan va ung dung
+## 4. Tích phân và ứng dụng
 
-### 4.1 Dinh nghia tich phan
+### 4.1 Định nghĩa tích phân
 
-Neu $f(x)$ lien tuc tren $[a;b]$ va $F(x)$ la mot nguyen ham cua $f(x)$ tren $[a;b]$, thi:
+Nếu $f(x)$ liên tục trên $[a;b]$ và $F(x)$ là một nguyên hàm của $f(x)$ trên $[a;b]$, thì:
 
 $$
 \int_a^b f(x)\,dx = F(b)-F(a).
 $$
 
-Neu $G(x)$ cung la mot nguyen ham cua $f(x)$ thi $G(x)=F(x)+C$, nen $G(b)-G(a)=F(b)-F(a)$.
+Nếu $G(x)$ cũng là một nguyên hàm của $f(x)$ thì $G(x)=F(x)+C$, nên $G(b)-G(a)=F(b)-F(a)$.
 
-### 4.2 Tinh chat tich phan
+### 4.2 Tính chất tích phân
 
-| Tinh chat | Cong thuc |
+| Tính chất | Công thức |
 |---|---:|
-| Dua hang so ra ngoai | $\displaystyle\int_a^b kf(x)\,dx = k\int_a^b f(x)\,dx$ |
-| Cong hai ham | $\displaystyle\int_a^b [f(x)+g(x)]\,dx = \int_a^b f(x)\,dx+\int_a^b g(x)\,dx$ |
-| Tru hai ham | $\displaystyle\int_a^b [f(x)-g(x)]\,dx = \int_a^b f(x)\,dx-\int_a^b g(x)\,dx$ |
-| Tach can | $\displaystyle\int_a^b f(x)\,dx = \int_a^c f(x)\,dx+\int_c^b f(x)\,dx$ voi $a<c<b$ |
+| Đưa hằng số ra ngoài | $\displaystyle\int_a^b kf(x)\,dx = k\int_a^b f(x)\,dx$ |
+| Cộng hai hàm | $\displaystyle\int_a^b [f(x)+g(x)]\,dx = \int_a^b f(x)\,dx+\int_a^b g(x)\,dx$ |
+| Trừ hai hàm | $\displaystyle\int_a^b [f(x)-g(x)]\,dx = \int_a^b f(x)\,dx-\int_a^b g(x)\,dx$ |
+| Tách cận | $\displaystyle\int_a^b f(x)\,dx = \int_a^c f(x)\,dx+\int_c^b f(x)\,dx$ với $a<c<b$ |
 
-Them hai tinh chat hay dung:
+Thêm hai tính chất hay dùng:
 
 $$
 \int_a^a f(x)\,dx=0,\qquad
 \int_a^b f(x)\,dx=-\int_b^a f(x)\,dx.
 $$
 
-### 4.3 Dien tich hinh phang
+### 4.3 Diện tích hình phẳng
 
-Dien tich hinh phang gioi han boi $y=f(x)$, truc hoanh va hai duong $x=a$, $x=b$:
+Diện tích hình phẳng giới hạn bởi $y=f(x)$, trục hoành và hai đường $x=a$, $x=b$:
 
 $$
 S=\int_a^b |f(x)|\,dx.
 $$
 
-Neu mien phang nam giua hai do thi $y=f(x)$ va $y=g(x)$:
+Nếu miền phẳng nằm giữa hai đồ thị $y=f(x)$ và $y=g(x)$:
 
 $$
 S=\int_a^b |f(x)-g(x)|\,dx.
 $$
 
-Meo lam bai: tim giao diem bang cach giai $f(x)=g(x)$, chia khoang theo giao diem, roi bo dau gia tri tuyet doi theo ham nam tren tru ham nam duoi.
+Mẹo làm bài: tìm giao điểm bằng cách giải $f(x)=g(x)$, chia khoảng theo giao điểm, rồi bỏ dấu giá trị tuyệt đối theo "hàm nằm trên trừ hàm nằm dưới".
 
-### 4.4 Gia tri trung binh cua ham so
+### 4.4 Giá trị trung bình của hàm số
 
-Gia tri trung binh cua ham lien tuc $f(x)$ tren $[a;b]$:
+Giá trị trung bình của hàm liên tục $f(x)$ trên $[a;b]$:
 
 $$
 f_{\text{tb}}=\frac{1}{b-a}\int_a^b f(x)\,dx.
 $$
 
-### 4.5 The tich vat the theo mat cat
+### 4.5 Thể tích vật thể theo mặt cắt
 
-Neu vat the bi cat vuong goc voi truc $Ox$ tai hoanh do $x$ va dien tich mat cat la $S(x)$, voi $S(x)$ lien tuc tren $[a;b]$, thi the tich:
+Nếu vật thể bị cắt vuông góc với trục $Ox$ tại hoành độ $x$ và diện tích mặt cắt là $S(x)$, với $S(x)$ liên tục trên $[a;b]$, thì thể tích:
 
 $$
 V=\int_a^b S(x)\,dx.
 $$
 
-### 4.6 The tich khoi tron xoay
+### 4.6 Thể tích khối tròn xoay
 
-Cho $f(x)$ lien tuc, khong am tren $[a;b]$. Khi quay hinh phang gioi han boi $y=f(x)$, truc hoanh, $x=a$, $x=b$ quanh truc $Ox$, the tich khoi tron xoay la:
+Cho $f(x)$ liên tục, không âm trên $[a;b]$. Khi quay hình phẳng giới hạn bởi $y=f(x)$, trục hoành, $x=a$, $x=b$ quanh trục $Ox$, thể tích khối tròn xoay là:
 
 $$
 V=\pi\int_a^b f^2(x)\,dx.
 $$
 
-Neu quay mien giua hai ham $f(x)$ va $g(x)$ quanh truc $Ox$, thuong dung:
+Nếu quay miền giữa hai hàm $f(x)$ và $g(x)$ quanh trục $Ox$, thường dùng:
 
 $$
 V=\pi\int_a^b \left(R^2(x)-r^2(x)\right)\,dx,
 $$
 
-trong do $R(x)$ la ban kinh lon, $r(x)$ la ban kinh nho.
+trong đó $R(x)$ là bán kính lớn, $r(x)$ là bán kính nhỏ.
 
-## 5. Vecto trong khong gian
+## 5. Vectơ trong không gian
 
-### 5.1 Toa do va phep toan vecto
+### 5.1 Tọa độ và phép toán vectơ
 
-Voi $A(x_A,y_A,z_A)$, $B(x_B,y_B,z_B)$:
+Với $A(x_A,y_A,z_A)$, $B(x_B,y_B,z_B)$:
 
 $$
 \vec{AB}=(x_B-x_A,\ y_B-y_A,\ z_B-z_A).
 $$
 
-Neu $\vec{a}=(x,y,z)$, $\vec{b}=(x',y',z')$:
+Nếu $\vec{a}=(x,y,z)$, $\vec{b}=(x',y',z')$:
 
-| Phep toan | Cong thuc |
+| Phép toán | Công thức |
 |---|---:|
-| Cong | $\vec{a}+\vec{b}=(x+x',y+y',z+z')$ |
-| Tru | $\vec{a}-\vec{b}=(x-x',y-y',z-z')$ |
-| Nhan voi so $k$ | $k\vec{a}=(kx,ky,kz)$ |
-| Do dai | $\lvert\vec{a}\rvert=\sqrt{x^2+y^2+z^2}$ |
+| Cộng | $\vec{a}+\vec{b}=(x+x',y+y',z+z')$ |
+| Trừ | $\vec{a}-\vec{b}=(x-x',y-y',z-z')$ |
+| Nhân với số $k$ | $k\vec{a}=(kx,ky,kz)$ |
+| Độ dài | $\|\vec{a}\|=\sqrt{x^2+y^2+z^2}$ |
 
-### 5.2 Tich vo huong va goc giua hai vecto
+### 5.2 Tích vô hướng và góc giữa hai vectơ
 
 $$
 \vec{a}\cdot\vec{b}=xx'+yy'+zz'.
 $$
 
-Hai vecto vuong goc khi va chi khi:
+Hai vectơ vuông góc khi và chỉ khi:
 
 $$
 \vec{a}\cdot\vec{b}=0.
 $$
 
-Neu $\vec{a}$ va $\vec{b}$ khac $\vec{0}$:
+Nếu $\vec{a}$ và $\vec{b}$ khác $\vec{0}$:
 
 $$
 \cos(\vec{a},\vec{b})
-=\frac{\vec{a}\cdot\vec{b}}{\lvert\vec{a}\rvert\lvert\vec{b}\rvert}
+=\frac{\vec{a}\cdot\vec{b}}{\|\vec{a}\|\|\vec{b}\|}
 =\frac{xx'+yy'+zz'}{\sqrt{x^2+y^2+z^2}\sqrt{x'^2+y'^2+z'^2}}.
 $$
 
-### 5.3 Tich co huong
+### 5.3 Tích có hướng
 
-Cho $\vec{u}=(a,b,c)$ va $\vec{v}=(a',b',c')$. Mot vecto vuong goc voi ca $\vec{u}$ va $\vec{v}$ la:
+Cho $\vec{u}=(a,b,c)$ và $\vec{v}=(a',b',c')$. Một vectơ vuông góc với cả $\vec{u}$ và $\vec{v}$ là:
 
 $$
 [\vec{u},\vec{v}]
 =(bc'-b'c,\ ca'-c'a,\ ab'-a'b).
 $$
 
-Dang dinh thuc:
+Dạng định thức, viết ổn định hơn bằng `det`:
 
 $$
 [\vec{u},\vec{v}]
 =\left(
-\begin{vmatrix}b&c\\b'&c'\end{vmatrix},
-\begin{vmatrix}c&a\\c'&a'\end{vmatrix},
-\begin{vmatrix}a&b\\a'&b'\end{vmatrix}
+\det\begin{pmatrix}b&c\\ b'&c'\end{pmatrix},
+\det\begin{pmatrix}c&a\\ c'&a'\end{pmatrix},
+\det\begin{pmatrix}a&b\\ a'&b'\end{pmatrix}
 \right).
 $$
 
-Ghi nho:
+Ghi nhớ:
 
-- $[\vec{u},\vec{v}]$ vuong goc voi ca $\vec{u}$ va $\vec{v}$.
-- $[\vec{u},\vec{v}]=\vec{0}$ khi va chi khi $\vec{u}$, $\vec{v}$ cung phuong.
-- Khi mat phang co hai vecto nam tren no, lay tich co huong cua hai vecto do se duoc mot vecto phap tuyen.
+- $[\vec{u},\vec{v}]$ vuông góc với cả $\vec{u}$ và $\vec{v}$.
+- $[\vec{u},\vec{v}]=\vec{0}$ khi và chỉ khi $\vec{u}$, $\vec{v}$ cùng phương.
+- Khi mặt phẳng có hai vectơ nằm trên nó, lấy tích có hướng của hai vectơ đó sẽ được một vectơ pháp tuyến.
 
-## 6. Toa do Oxyz
+## 6. Tọa độ Oxyz
 
-### 6.1 Diem, trung diem, trong tam
+### 6.1 Điểm, trung điểm, trọng tâm
 
-Voi $A(x_A,y_A,z_A)$, $B(x_B,y_B,z_B)$:
+Với $A(x_A,y_A,z_A)$, $B(x_B,y_B,z_B)$:
 
 $$
 I\left(\frac{x_A+x_B}{2},\frac{y_A+y_B}{2},\frac{z_A+z_B}{2}\right)
 $$
 
-la trung diem cua $AB$.
+là trung điểm của $AB$.
 
-Voi tam giac $ABC$, trong tam:
+Với tam giác $ABC$, trọng tâm:
 
 $$
 G\left(
@@ -313,49 +315,49 @@ G\left(
 \right).
 $$
 
-### 6.2 Khoang cach hai diem
+### 6.2 Khoảng cách hai điểm
 
 $$
 AB=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}.
 $$
 
-### 6.3 Kiem tra thang hang, dong phang
+### 6.3 Kiểm tra thẳng hàng, đồng phẳng
 
-Ba diem $A,B,C$ thang hang khi $\vec{AB}$ va $\vec{AC}$ cung phuong:
+Ba điểm $A,B,C$ thẳng hàng khi $\vec{AB}$ và $\vec{AC}$ cùng phương:
 
 $$
 \vec{AB}=k\vec{AC}.
 $$
 
-Bon diem $A,B,C,D$ dong phang khi:
+Bốn điểm $A,B,C,D$ đồng phẳng khi:
 
 $$
 [\vec{AB},\vec{AC}]\cdot\vec{AD}=0.
 $$
 
-## 7. Mat phang, duong thang, mat cau
+## 7. Mặt phẳng, đường thẳng, mặt cầu
 
-### 7.1 Vecto phap tuyen va phuong trinh mat phang
+### 7.1 Vectơ pháp tuyến và phương trình mặt phẳng
 
-Mat phang $(P): Ax+By+Cz+D=0$ co vecto phap tuyen:
+Mặt phẳng $(P): Ax+By+Cz+D=0$ có vectơ pháp tuyến:
 
 $$
 \vec{n}=(A,B,C).
 $$
 
-Neu mat phang di qua $M_0(x_0,y_0,z_0)$ va co vecto phap tuyen $\vec{n}=(A,B,C)$:
+Nếu mặt phẳng đi qua $M_0(x_0,y_0,z_0)$ và có vectơ pháp tuyến $\vec{n}=(A,B,C)$:
 
 $$
 A(x-x_0)+B(y-y_0)+C(z-z_0)=0.
 $$
 
-Neu mat phang co hai vecto nam tren no la $\vec{u}$, $\vec{v}$, chon:
+Nếu mặt phẳng có hai vectơ nằm trên nó là $\vec{u}$, $\vec{v}$, chọn:
 
 $$
 \vec{n}=[\vec{u},\vec{v}].
 $$
 
-### 7.2 Hai mat phang vuong goc
+### 7.2 Hai mặt phẳng vuông góc
 
 Cho:
 
@@ -364,25 +366,25 @@ $$
 (\beta): A'x+B'y+C'z+D'=0.
 $$
 
-Vecto phap tuyen tuong ung:
+Vectơ pháp tuyến tương ứng:
 
 $$
 \vec{n}=(A,B,C),\qquad \vec{n'}=(A',B',C').
 $$
 
-Hai mat phang vuong goc khi:
+Hai mặt phẳng vuông góc khi:
 
 $$
+\begin{aligned}
 (\alpha)\perp(\beta)
-\Longleftrightarrow
-\vec{n}\perp\vec{n'}
-\Longleftrightarrow
-AA'+BB'+CC'=0.
+&\Longleftrightarrow \vec{n}\perp\vec{n'}\\
+&\Longleftrightarrow AA'+BB'+CC'=0.
+\end{aligned}
 $$
 
-### 7.3 Hai mat phang song song
+### 7.3 Hai mặt phẳng song song
 
-Voi hai mat phang o tren:
+Với hai mặt phẳng ở trên:
 
 $$
 (\alpha)\parallel(\beta)
@@ -393,21 +395,21 @@ D'\ne kD
 \end{cases}
 $$
 
-voi mot so $k$ nao do. Neu $\vec{n'}=k\vec{n}$ va $D'=kD$ thi hai mat phang trung nhau.
+với một số $k$ nào đó. Nếu $\vec{n'}=k\vec{n}$ và $D'=kD$ thì hai mặt phẳng trùng nhau.
 
-### 7.4 Khoang cach tu diem den mat phang
+### 7.4 Khoảng cách từ điểm đến mặt phẳng
 
-Khoang cach tu $M(x_0,y_0,z_0)$ den mat phang $(P): Ax+By+Cz+D=0$:
+Khoảng cách từ $M(x_0,y_0,z_0)$ đến mặt phẳng $(P): Ax+By+Cz+D=0$:
 
 $$
 d(M,(P))=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}.
 $$
 
-### 7.5 Vecto chi phuong va duong thang
+### 7.5 Vectơ chỉ phương và đường thẳng
 
-Vecto chi phuong cua duong thang la vecto song song hoac nam tren duong thang.
+Vectơ chỉ phương của đường thẳng là vectơ song song hoặc nằm trên đường thẳng.
 
-Neu duong thang $d$ di qua $M_0(x_0,y_0,z_0)$ va co vecto chi phuong $\vec{u}=(a,b,c)$, phuong trinh tham so:
+Nếu đường thẳng $d$ đi qua $M_0(x_0,y_0,z_0)$ và có vectơ chỉ phương $\vec{u}=(a,b,c)$, phương trình tham số:
 
 $$
 \begin{cases}
@@ -417,145 +419,145 @@ z=z_0+ct.
 \end{cases}
 $$
 
-Neu $abc\ne0$, phuong trinh chinh tac:
+Nếu $abc\ne0$, phương trình chính tắc:
 
 $$
 \frac{x-x_0}{a}=\frac{y-y_0}{b}=\frac{z-z_0}{c}.
 $$
 
-### 7.6 Goc giua hai duong thang
+### 7.6 Góc giữa hai đường thẳng
 
-Neu hai duong thang co vecto chi phuong $\vec{u}_1=(a_1,b_1,c_1)$ va $\vec{u}_2=(a_2,b_2,c_2)$:
+Nếu hai đường thẳng có vectơ chỉ phương $\vec{u}_1=(a_1,b_1,c_1)$ và $\vec{u}_2=(a_2,b_2,c_2)$:
 
 $$
-\cos\varphi=
-\frac{|\vec{u}_1\cdot\vec{u}_2|}
-{\lvert\vec{u}_1\rvert\lvert\vec{u}_2\rvert}
-=
-\frac{|a_1a_2+b_1b_2+c_1c_2|}
+\begin{aligned}
+\cos\varphi
+&= \frac{\left|\vec{u}_1\cdot\vec{u}_2\right|}{\|\vec{u}_1\|\|\vec{u}_2\|}\\
+&= \frac{|a_1a_2+b_1b_2+c_1c_2|}
 {\sqrt{a_1^2+b_1^2+c_1^2}\sqrt{a_2^2+b_2^2+c_2^2}}.
+\end{aligned}
 $$
 
-Hai duong thang vuong goc khi:
+Hai đường thẳng vuông góc khi:
 
 $$
 \vec{u}_1\cdot\vec{u}_2=0.
 $$
 
-### 7.7 Goc giua duong thang va mat phang
+### 7.7 Góc giữa đường thẳng và mặt phẳng
 
-Neu duong thang $d$ co vecto chi phuong $\vec{u}$, mat phang $(P)$ co vecto phap tuyen $\vec{n}$, goc giua $d$ va $(P)$ la $\alpha$:
+Nếu đường thẳng $d$ có vectơ chỉ phương $\vec{u}$, mặt phẳng $(P)$ có vectơ pháp tuyến $\vec{n}$, góc giữa $d$ và $(P)$ là $\alpha$:
 
 $$
-\sin\alpha=\frac{|\vec{u}\cdot\vec{n}|}{|\vec{u}||\vec{n}|}.
+\sin\alpha=\frac{\left|\vec{u}\cdot\vec{n}\right|}{\|\vec{u}\|\|\vec{n}\|}.
 $$
 
-### 7.8 Goc giua hai mat phang
+### 7.8 Góc giữa hai mặt phẳng
 
-Goc giua hai mat phang bang goc giua hai vecto phap tuyen cua chung:
+Góc giữa hai mặt phẳng bằng góc giữa hai vectơ pháp tuyến của chúng:
 
 $$
 \cos\varphi=
-\frac{|\vec{n}_1\cdot\vec{n}_2|}
-{|\vec{n}_1||\vec{n}_2|}.
+\frac{\left|\vec{n}_1\cdot\vec{n}_2\right|}
+{\|\vec{n}_1\|\|\vec{n}_2\|}.
 $$
 
-### 7.9 Mat cau
+### 7.9 Mặt cầu
 
-Mat cau tam $I(a,b,c)$, ban kinh $R$:
+Mặt cầu tâm $I(a,b,c)$, bán kính $R$:
 
 $$
 (x-a)^2+(y-b)^2+(z-c)^2=R^2.
 $$
 
-Dang tong quat:
+Dạng tổng quát:
 
 $$
 x^2+y^2+z^2+Ax+By+Cz+D=0.
 $$
 
-Tam va ban kinh:
+Tâm và bán kính:
 
 $$
 I\left(-\frac{A}{2},-\frac{B}{2},-\frac{C}{2}\right),\qquad
 R=\sqrt{\frac{A^2+B^2+C^2}{4}-D}.
 $$
 
-Dieu kien la:
+Điều kiện là:
 
 $$
 \frac{A^2+B^2+C^2}{4}-D>0.
 $$
 
-## 8. Mu, logarit va so phuc
+## 8. Mũ, logarit và số phức
 
-### 8.1 Mu va logarit
+### 8.1 Mũ và logarit
 
-Dieu kien can nho:
+Điều kiện cần nhớ:
 
-- $a^x$ xac dinh voi $a>0$, $a\ne1$ neu lam logarit co co so $a$.
-- $\log_a f(x)$ xac dinh khi $a>0$, $a\ne1$, $f(x)>0$.
-- $\ln f(x)$ xac dinh khi $f(x)>0$.
+- $a^x$ xác định với $a>0$.
+- $\log_a f(x)$ xác định khi $a>0$, $a\ne1$, $f(x)>0$.
+- $\ln f(x)$ xác định khi $f(x)>0$.
 
-Cong thuc logarit:
+Công thức logarit:
 
-| Cong thuc | Dieu kien |
+| Công thức | Điều kiện |
 |---|---|
 | $\log_a(xy)=\log_a x+\log_a y$ | $x>0,y>0$ |
 | $\log_a\left(\dfrac{x}{y}\right)=\log_a x-\log_a y$ | $x>0,y>0$ |
 | $\log_a x^\alpha=\alpha\log_a x$ | $x>0$ |
 | $\log_a b=\dfrac{\ln b}{\ln a}$ | $a,b>0,a\ne1$ |
 
-### 8.2 So phuc
+### 8.2 Số phức
 
-So phuc co dang:
+Số phức có dạng:
 
 $$
 z=a+bi,\qquad i^2=-1.
 $$
 
-| Khai niem | Cong thuc |
+| Khái niệm | Công thức |
 |---|---:|
-| Phan thuc | $\operatorname{Re}(z)=a$ |
-| Phan ao | $\operatorname{Im}(z)=b$ |
-| So phuc lien hop | $\overline{z}=a-bi$ |
-| Mo dun | $|z|=\sqrt{a^2+b^2}$ |
-| Tich voi lien hop | $z\overline{z}=|z|^2=a^2+b^2$ |
+| Phần thực | $\operatorname{Re}(z)=a$ |
+| Phần ảo | $\operatorname{Im}(z)=b$ |
+| Số phức liên hợp | $\overline{z}=a-bi$ |
+| Mô đun | $|z|=\sqrt{a^2+b^2}$ |
+| Tích với liên hợp | $z\overline{z}=|z|^2=a^2+b^2$ |
 
-Chia so phuc:
+Chia số phức:
 
 $$
 \frac{z_1}{z_2}=\frac{z_1\overline{z_2}}{z_2\overline{z_2}},\qquad z_2\ne0.
 $$
 
-## 9. Checklist lam bai
+## 9. Checklist làm bài
 
-### 9.1 Gap bai ham so
+### 9.1 Gặp bài hàm số
 
-1. Tim tap xac dinh.
-2. Tinh $y'$.
-3. Giai $y'=0$.
-4. Xet dau $y'$.
-5. Ket luan theo cau hoi: dong bien, cuc tri, min-max, do thi, tiem can.
+1. Tìm tập xác định.
+2. Tính $y'$.
+3. Giải $y'=0$.
+4. Xét dấu $y'$.
+5. Kết luận theo câu hỏi: đồng biến, cực trị, min-max, đồ thị, tiệm cận.
 
-### 9.2 Gap bai tich phan
+### 9.2 Gặp bài tích phân
 
-1. Nhan dang dang co ban hay can doi bien/tung phan.
-2. Neu la tich phan xac dinh, tim nguyen ham $F(x)$.
-3. Tinh $F(b)-F(a)$.
-4. Neu dien tich, nho lay gia tri tuyet doi hoac chia khoang.
-5. Neu the tich tron xoay, nho binh phuong ban kinh va nhan $\pi$.
+1. Nhận dạng dạng cơ bản hay cần đổi biến/từng phần.
+2. Nếu là tích phân xác định, tìm nguyên hàm $F(x)$.
+3. Tính $F(b)-F(a)$.
+4. Nếu là diện tích, nhớ lấy giá trị tuyệt đối hoặc chia khoảng.
+5. Nếu là thể tích tròn xoay, nhớ bình phương bán kính và nhân $\pi$.
 
-### 9.3 Gap bai Oxyz
+### 9.3 Gặp bài Oxyz
 
-1. Doi tat ca ve vecto.
-2. Can vuong goc thi dung tich vo huong $=0$.
-3. Can vecto phap tuyen thi dung tich co huong.
-4. Can mat phang thi can mot diem va mot vecto phap tuyen.
-5. Can duong thang thi can mot diem va mot vecto chi phuong.
-6. Can khoang cach diem-den-mat-phang thi thay vao cong thuc.
+1. Đổi tất cả về vectơ.
+2. Cần vuông góc thì dùng tích vô hướng $=0$.
+3. Cần vectơ pháp tuyến thì dùng tích có hướng.
+4. Cần mặt phẳng thì cần một điểm và một vectơ pháp tuyến.
+5. Cần đường thẳng thì cần một điểm và một vectơ chỉ phương.
+6. Cần khoảng cách điểm đến mặt phẳng thì thay vào công thức.
 
-## Nguon cong thuc tu anh da chuyen thanh Markdown
+## Nguồn công thức từ ảnh đã chuyển thành Markdown
 
 - [`goc_giua_hai_vecto.png`](./images/goc_giua_hai_vecto.png)
 - [`tinh_chat_tich_phan.png`](./images/tinh_chat_tich_phan.png)
