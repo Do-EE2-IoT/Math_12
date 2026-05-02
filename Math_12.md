@@ -18,7 +18,8 @@ Tài liệu này gom những công thức cốt lõi để xử lý phần lớn
 - [6. Tọa độ Oxyz](#6-tọa-độ-oxyz)
 - [7. Mặt phẳng, đường thẳng, mặt cầu](#7-mặt-phẳng-đường-thẳng-mặt-cầu)
 - [8. Mũ, logarit và số phức](#8-mũ-logarit-và-số-phức)
-- [9. Checklist làm bài](#9-checklist-làm-bài)
+- [9. Xác suất](#9-xác-suất)
+- [10. Checklist làm bài](#10-checklist-làm-bài)
 
 ## 1. Đạo hàm và nguyên hàm
 
@@ -518,11 +519,13 @@ $$
 
 | Khái niệm | Công thức |
 |---|---:|
-| Phần thực | $\operatorname{Re}(z)=a$ |
-| Phần ảo | $\operatorname{Im}(z)=b$ |
+| Phần thực | $a$ |
+| Phần ảo | $b$ |
 | Số phức liên hợp | $\overline{z}=a-bi$ |
 | Mô đun | $|z|=\sqrt{a^2+b^2}$ |
 | Tích với liên hợp | $z\overline{z}=|z|^2=a^2+b^2$ |
+
+Nói cách khác, nếu $z=a+bi$ thì phần thực là $a$, phần ảo là $b$.
 
 Chia số phức:
 
@@ -530,9 +533,139 @@ $$
 \frac{z_1}{z_2}=\frac{z_1\overline{z_2}}{z_2\overline{z_2}},\qquad z_2\ne0.
 $$
 
-## 9. Checklist làm bài
+## 9. Xác suất
 
-### 9.1 Gặp bài hàm số
+Phần xác suất thường không khó vì công thức dài, mà khó ở chỗ nhận ra biến cố nào là "điều kiện đã biết" và biến cố nào là "kết quả cần tính".
+
+### 9.1 Ký hiệu cơ bản
+
+| Ký hiệu | Ý nghĩa |
+|---|---|
+| $A$, $B$ | Biến cố |
+| $\overline{A}$ | Biến cố đối của $A$ |
+| $A\cap B$ | $A$ và $B$ cùng xảy ra |
+| $A\cup B$ | $A$ hoặc $B$ xảy ra |
+| $P(A)$ | Xác suất của biến cố $A$ |
+| $P(A\mid B)$ | Xác suất của $A$ khi biết $B$ đã xảy ra |
+
+Hai công thức nền:
+
+$$
+P(\overline{A})=1-P(A).
+$$
+
+$$
+P(A\cup B)=P(A)+P(B)-P(A\cap B).
+$$
+
+Nếu $A$ và $B$ xung khắc, tức là không thể cùng xảy ra, thì:
+
+$$
+P(A\cap B)=0,\qquad P(A\cup B)=P(A)+P(B).
+$$
+
+### 9.2 Xác suất có điều kiện
+
+Xác suất của $A$ khi biết $B$ đã xảy ra:
+
+$$
+P(A\mid B)=\frac{P(A\cap B)}{P(B)},\qquad P(B)>0.
+$$
+
+Từ đó suy ra công thức nhân:
+
+$$
+P(A\cap B)=P(B)P(A\mid B)=P(A)P(B\mid A).
+$$
+
+Cách đọc nhanh:
+
+- $P(A\mid B)$: đang đứng trong thế giới mà $B$ đã xảy ra, hỏi khả năng $A$ xảy ra.
+- $P(B\mid A)$: đang đứng trong thế giới mà $A$ đã xảy ra, hỏi khả năng $B$ xảy ra.
+
+Hai xác suất này thường khác nhau, nên không được tự đổi chỗ $A$ và $B$.
+
+### 9.3 Biến cố độc lập
+
+$A$ và $B$ độc lập nếu việc $B$ xảy ra không làm thay đổi xác suất của $A$:
+
+$$
+P(A\mid B)=P(A).
+$$
+
+Tương đương:
+
+$$
+P(A\cap B)=P(A)P(B).
+$$
+
+Mẹo nhận dạng: nếu đề nói "chọn/lấy/thực hiện độc lập", "lặp lại trong cùng điều kiện", hoặc kết quả lần này không ảnh hưởng lần kia, thường nghĩ đến công thức độc lập.
+
+### 9.4 Công thức xác suất toàn phần
+
+Giả sử $B_1,B_2,\ldots,B_n$ là một hệ biến cố đầy đủ, nghĩa là:
+
+- Các $B_i$ đôi một xung khắc.
+- Chắc chắn có đúng một trong các $B_i$ xảy ra.
+- $P(B_i)>0$ với mọi $i$.
+
+Khi đó:
+
+$$
+P(A)=P(B_1)P(A\mid B_1)+P(B_2)P(A\mid B_2)+\cdots+P(B_n)P(A\mid B_n).
+$$
+
+Viết gọn:
+
+$$
+P(A)=\sum_{i=1}^{n}P(B_i)P(A\mid B_i).
+$$
+
+Trường hợp hay gặp nhất là tách theo $B$ và $\overline{B}$:
+
+$$
+P(A)=P(B)P(A\mid B)+P(\overline{B})P(A\mid \overline{B}).
+$$
+
+Cách hiểu: muốn tính xác suất $A$, ta chia bài toán thành nhiều "con đường" dẫn đến $A$, rồi cộng xác suất của từng con đường.
+
+### 9.5 Công thức Bayes
+
+Bayes dùng khi đề cho xác suất "đi xuôi" $P(A\mid B_i)$, nhưng hỏi xác suất "truy ngược" $P(B_i\mid A)$.
+
+Với hệ biến cố đầy đủ $B_1,B_2,\ldots,B_n$:
+
+$$
+P(B_k\mid A)
+=\frac{P(B_k)P(A\mid B_k)}
+{\sum_{i=1}^{n}P(B_i)P(A\mid B_i)}.
+$$
+
+Trường hợp chỉ có $B$ và $\overline{B}$:
+
+$$
+P(B\mid A)
+=\frac{P(B)P(A\mid B)}
+{P(B)P(A\mid B)+P(\overline{B})P(A\mid \overline{B})}.
+$$
+
+### 9.6 Quy trình làm bài xác suất có điều kiện
+
+1. Gọi rõ biến cố cần tìm, ví dụ $A$: "người được chọn bị bệnh", $B$: "test dương tính".
+2. Xác định đề đang hỏi $P(A)$, $P(A\mid B)$ hay $P(B\mid A)$.
+3. Nếu bài có nhiều nhóm/trường hợp, đặt các nhóm là $B_1,B_2,\ldots,B_n$.
+4. Tính mẫu số bằng xác suất toàn phần nếu cần.
+5. Nếu hỏi "biết kết quả rồi truy ngược nguyên nhân", dùng Bayes.
+
+Ví dụ nhận dạng nhanh:
+
+- "Biết rằng test dương tính, xác suất người đó thật sự mắc bệnh là bao nhiêu?" -> Bayes.
+- "Một sản phẩm lấy từ nhà máy bất kỳ, xác suất bị lỗi là bao nhiêu?" -> Xác suất toàn phần.
+- "Biết đã chọn học sinh lớp 12A, xác suất học sinh đó giỏi Toán là bao nhiêu?" -> Xác suất có điều kiện.
+
+## 10. Checklist làm bài
+
+### 10.1 Gặp bài hàm số
 
 1. Tìm tập xác định.
 2. Tính $y'$.
@@ -540,7 +673,7 @@ $$
 4. Xét dấu $y'$.
 5. Kết luận theo câu hỏi: đồng biến, cực trị, min-max, đồ thị, tiệm cận.
 
-### 9.2 Gặp bài tích phân
+### 10.2 Gặp bài tích phân
 
 1. Nhận dạng dạng cơ bản hay cần đổi biến/từng phần.
 2. Nếu là tích phân xác định, tìm nguyên hàm $F(x)$.
@@ -548,7 +681,7 @@ $$
 4. Nếu là diện tích, nhớ lấy giá trị tuyệt đối hoặc chia khoảng.
 5. Nếu là thể tích tròn xoay, nhớ bình phương bán kính và nhân $\pi$.
 
-### 9.3 Gặp bài Oxyz
+### 10.3 Gặp bài Oxyz
 
 1. Đổi tất cả về vectơ.
 2. Cần vuông góc thì dùng tích vô hướng $=0$.
@@ -556,6 +689,14 @@ $$
 4. Cần mặt phẳng thì cần một điểm và một vectơ pháp tuyến.
 5. Cần đường thẳng thì cần một điểm và một vectơ chỉ phương.
 6. Cần khoảng cách điểm đến mặt phẳng thì thay vào công thức.
+
+### 10.4 Gặp bài xác suất
+
+1. Đặt tên biến cố rõ ràng.
+2. Xác định đề hỏi xác suất thường, xác suất có điều kiện, toàn phần hay Bayes.
+3. Nếu có nhiều trường hợp, chia thành hệ biến cố đầy đủ.
+4. Tính từng nhánh bằng công thức nhân.
+5. Cộng các nhánh nếu dùng xác suất toàn phần, hoặc lấy tỉ lệ nếu dùng Bayes.
 
 ## Nguồn công thức từ ảnh đã chuyển thành Markdown
 
