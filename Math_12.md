@@ -690,54 +690,54 @@ Ví dụ nhận dạng nhanh:
 4. Tính từng nhánh bằng công thức nhân.
 5. Cộng các nhánh nếu dùng xác suất toàn phần, hoặc lấy tỉ lệ nếu dùng Bayes.
 
-
-
 ### Bonus
-# Khoảng Cách Từ Một Điểm Đến Đường Thẳng Trong Không Gian Oxyz
 
-Tài liệu tóm tắt công thức, cách xác định các thành phần và phương pháp tính toán nhanh.
+# KHOẢNG CÁCH TỪ ĐIỂM ĐẾN ĐƯỜNG THẲNG TRONG KHÔNG GIAN OXYZ
 
-## 1. Cách xác định điểm A từ giao tuyến của hai mặt phẳng
+---
 
-Đường thẳng $\Delta$ là giao tuyến của hai mặt phẳng $(P)$ và $(Q)$. Để tìm một điểm $A \in \Delta$:
+## 1. Cách xác định điểm A từ giao tuyến 2 mặt phẳng
 
-- **Phương pháp:** Chọn một ẩn ($x, y$ hoặc $z$) một giá trị cụ thể (thường chọn bằng $0$), sau đó giải hệ phương trình của $(P)$ và $(Q)$ để tìm hai ẩn còn lại.
-- **Ví dụ:** Cho $z = 0$, giải hệ:
-  $$\begin{cases} (P): a_1x + b_1y + d_1 = 0 \\ (Q): a_2x + b_2y + d_2 = 0 \end{cases}$$
-  Giải hệ tìm được $x, y \Rightarrow$ Tọa độ điểm $A(x; y; 0)$.
+Đường thẳng (d) là giao của hai mặt phẳng (P) và (Q). Để tìm điểm A thuộc (d):
 
-## 2. Công thức tính khoảng cách (Dựa trên diện tích)
+- **Phương pháp:** Chọn một ẩn (x, y hoặc z) bằng 0, sau đó giải hệ 2 phương trình còn lại.
+- **Ví dụ:** Cho z = 0, giải hệ phương trình của (P) và (Q) để tìm x và y.
+- **Kết quả:** Ta có tọa độ điểm A(x; y; 0).
 
-Khoảng cách từ điểm $M$ đến đường thẳng $\Delta$ (đi qua $A$, có VTCP $\vec{u}$):
-$$d(M, \Delta) = \frac{|[\vec{AM}, \vec{u}]|}{|\vec{u}|}$$
+---
 
-**Suy luận hình học:**
+## 2. Chứng minh công thức từ hình học
 
-1.  **Diện tích hình bình hành:** Độ lớn tích có hướng $|[\vec{AM}, \vec{u}]|$ là diện tích hình bình hành tạo bởi $\vec{AM}$ và $\vec{u}$.
-2.  **Đường cao:** Diện tích $S = \text{Đáy} \times \text{Cao} = |\vec{u}| \cdot h$.
-3.  **Kết luận:** Khoảng cách $h$ chính là đường cao: $h = \frac{S}{|\vec{u}|}$.
+Giả sử ta cần tính khoảng cách từ điểm **M** đến đường thẳng **(d)** đi qua **A** và có vectơ chỉ phương **u**.
 
-## 3. Công thức Tích có hướng (Cross Product)
+1. **Dựng hình:** Xét hình bình hành được tạo bởi hai vectơ **AM** và **u**.
+2. **Diện tích hình bình hành (S):**
+   - Theo định nghĩa tích có hướng: `S = |[AM, u]|`
+   - Theo công thức cơ bản: `S = Đáy * Cao = |u| * h`
+   - Trong đó: **h** chính là khoảng cách từ M đến (d).
+3. **Suy luận:**
+   - Ta có: `|u| * h = |[AM, u]|`
+   - Suy ra: `h = |[AM, u]| / |u|`
 
-Cho $\vec{a} = (a_1, a_2, a_3)$ và $\vec{b} = (b_1, b_2, b_3)$. Tích có hướng $[\vec{a}, \vec{b}]$ là một vectơ:
+**Kết luận:** Công thức tính nhanh là: **d(M, d) = |[AM, u]| / |u|**
 
-$$
-[\vec{a}, \vec{b}] = \left(
-\begin{vmatrix} a_2 & a_3 \\ b_2 & b_3 \end{vmatrix};
-\begin{vmatrix} a_3 & a_1 \\ b_3 & b_1 \end{vmatrix};
-\begin{vmatrix} a_1 & a_2 \\ b_1 & b_2 \end{vmatrix}
-\right)
-$$
+---
 
-### Mẹo tính nhanh:
+## 3. Công thức Tích có hướng (Vectơ)
 
-- **Quy tắc che cột:**
-  - Tính $x$: Che cột 1.
-  - Tính $y$: Che cột 2 (tính ngược hoặc xoay vòng cột 3 - cột 1).
-  - Tính $z$: Che cột 3.
-- **Định thức $2 \times 2$:** $\begin{vmatrix} e & f \\ g & h \end{vmatrix} = e \cdot h - f \cdot g$
+Cho vectơ a = (a1, a2, a3) và b = (b1, b2, b3).
+Vectơ tích có hướng [a, b] có tọa độ (X; Y; Z) tính như sau:
 
-## 4. Lưu ý quan trọng
+- **X = a2*b3 - a3*b2** (Che cột 1)
+- **Y = a3*b1 - a1*b3** (Che cột 2)
+- **Z = a1*b2 - a2*b1** (Che cột 3)
 
-- **Vectơ chỉ phương $\vec{u}$:** Nếu $\Delta$ là giao tuyến của $(P)$ và $(Q)$, thì $\vec{u} = [\vec{n_P}, \vec{n_Q}]$.
-- **Tích vô hướng (Bonus):** $\vec{a} \cdot \vec{b} = a_1b_1 + a_2b_2 + a_3b_3$. Nếu kết quả bằng $0$ thì hai vectơ vuông góc.
+**Mẹo tính tay:** Viết tọa độ thành 2 hàng, sau đó nhân chéo các định thức 2x2.
+
+---
+
+## 4. Lưu ý quan trọng để làm bài
+
+- **Vectơ chỉ phương u:** Nếu đường thẳng là giao tuyến 2 mặt phẳng (P) và (Q), tính: **u = [nP, nQ]**.
+- **Độ dài vectơ |u|:** Tính bằng `căn bậc hai của (u1^2 + u2^2 + u3^2)`.
+- **Tích vô hướng:** `a.b = a1*b1 + a2*b2 + a3*b3`. Nếu bằng 0 thì hai vectơ vuông góc.
