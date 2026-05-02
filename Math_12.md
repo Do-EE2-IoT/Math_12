@@ -221,14 +221,6 @@ $$
 V=\pi\int_a^b f^2(x)\,dx.
 $$
 
-Nếu quay miền giữa hai hàm $f(x)$ và $g(x)$ quanh trục $Ox$, thường dùng:
-
-$$
-V=\pi\int_a^b \left(R^2(x)-r^2(x)\right)\,dx,
-$$
-
-trong đó $R(x)$ là bán kính lớn, $r(x)$ là bán kính nhỏ.
-
 ## 5. Vectơ trong không gian
 
 ### 5.1 Tọa độ và phép toán vectơ
