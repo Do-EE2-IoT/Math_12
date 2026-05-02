@@ -690,3 +690,45 @@ Ví dụ nhận dạng nhanh:
 4. Tính từng nhánh bằng công thức nhân.
 5. Cộng các nhánh nếu dùng xác suất toàn phần, hoặc lấy tỉ lệ nếu dùng Bayes.
 
+
+// Bonus
+Dưới đây là tóm tắt súc tích nhất để bạn nắm trọn quy trình:
+## 1. Cách chọn điểm $A$ từ giao tuyến 2 mặt phẳng
+Đường thẳng $\Delta$ là giao của $(P)$ và $(Q)$. Để tìm $A \in \Delta$:
+
+* Cách làm: Chọn đại một ẩn ($x, y$ hoặc $z$) bằng một số cụ thể (thường chọn bằng $0$), sau đó giải hệ 2 phương trình còn lại.
+* Ví dụ: Cho $z = 0$, giải hệ $\begin{cases} (P) \\ (Q) \end{cases} \Rightarrow$ tìm được $x, y$. Ta có $A(x; y; 0)$.
+
+## 2. Cách suy ra công thức (Dựa vào diện tích)
+Công thức: $d(M, \Delta) = \frac{|[\vec{AM}, \vec{u}]|}{|\vec{u}|}$
+Suy luận nhanh:
+
+   1. Diện tích hình bình hành: Độ lớn tích có hướng $|[\vec{AM}, \vec{u}]|$ chính là diện tích hình bình hành tạo bởi vectơ nối điểm ($\vec{AM}$) và vectơ chỉ phương ($\vec{u}$).
+   2. Chiều cao hình bình hành: Mặt khác, Diện tích = Đáy $\times$ Cao $\Rightarrow S = |\vec{u}| \cdot h$.
+   3. Kết quả: Khoảng cách $h$ chính là chiều cao. Vậy $h = \frac{S}{\text{Đáy}} = \frac{|[\vec{AM}, \vec{u}]|}{|\vec{u}|}$.
+
+## 3. Lưu ý để hoàn thiện bài toán
+Để tính được, bạn cần thêm vectơ chỉ phương $\vec{u}$:
+
+* $\vec{u} = [\vec{n_P}, \vec{n_Q}]$ (Tích có hướng của hai vectơ pháp tuyến của hai mặt phẳng).
+
+Bạn có cần tôi tính thử một bài tập cụ thể với số liệu thực tế để kiểm tra lại công thức không?
+
+Trong không gian $Oxyz$, cho hai vectơ $\vec{a} = (a_1, a_2, a_3)$ và $\vec{b} = (b_1, b_2, b_3)$. Tích có hướng của chúng là một vectơ, ký hiệu là $[\vec{a}, \vec{b}]$ hoặc $\vec{a} \times \vec{b}$, được tính theo công thức:
+$$[\vec{a}, \vec{b}] = \left( \begin{vmatrix} a_2 & a_3 \\ b_2 & b_3 \end{vmatrix}; \begin{vmatrix} a_3 & a_1 \\ b_3 & b_1 \end{vmatrix}; \begin{vmatrix} a_1 & a_2 \\ b_1 & b_2 \end{vmatrix} \right)$$ 
+Cách tính từng thành phần (định thức $2 \times 2$):
+Công thức nhân chéo: $\begin{vmatrix} e & f \\ g & h \end{vmatrix} = e \cdot h - f \cdot g$
+
+   1. Tọa độ $x$: Che cột thứ nhất, tính định thức 2 cột còn lại.
+   2. Tọa độ $y$: Che cột thứ hai, tính định thức cột 3 và cột 1 (theo đúng thứ tự xoay vòng).
+   3. Tọa độ $z$: Che cột thứ ba, tính định thức 2 cột đầu.
+
+Mẹo nhớ nhanh:
+Viết tọa độ hai vectơ thành hai hàng, viết thêm cột thứ nhất và thứ hai vào phía sau:
+$a_1 \quad a_2 \quad a_3 \quad a_1 \quad a_2$
+$b_1 \quad b_2 \quad b_3 \quad b_1 \quad b_2$
+Bắt đầu từ cột 2, nhân chéo từng cặp 2x2 kế tiếp nhau sẽ ra lần lượt tọa độ $x, y, z$.
+Ứng dụng trong bài toán của bạn:
+Để tìm vectơ chỉ phương $\vec{u}$ của giao tuyến hai mặt phẳng, bạn chỉ cần lấy tích có hướng của hai vectơ pháp tuyến: $\vec{u} = [\vec{n_1}, \vec{n_2}]$.
+
+
