@@ -698,16 +698,3 @@ Ví dụ nhận dạng nhanh:
 4. Tính từng nhánh bằng công thức nhân.
 5. Cộng các nhánh nếu dùng xác suất toàn phần, hoặc lấy tỉ lệ nếu dùng Bayes.
 
-## Nguồn công thức từ ảnh đã chuyển thành Markdown
-
-- [`goc_giua_hai_vecto.png`](./images/goc_giua_hai_vecto.png)
-- [`tinh_chat_tich_phan.png`](./images/tinh_chat_tich_phan.png)
-- [`tich_phan_mat_s.png`](./images/tich_phan_mat_s.png)
-- [`gia_tri_trung_binh_hamso.png`](./images/gia_tri_trung_binh_hamso.png)
-- [`tichphan_the_tich.png`](./images/tichphan_the_tich.png)
-- [`the_tich_khoi_tron_xoay.png`](./images/the_tich_khoi_tron_xoay.png)
-- [`vecto_phap_tuyen.png`](./images/vecto_phap_tuyen.png)
-- [`hai_mat_phang_vuong_goc.png`](./images/hai_mat_phang_vuong_goc.png)
-- [`hai_mat_phang_song_song.png`](./images/hai_mat_phang_song_song.png)
-- [`mot_Diemt_toi_1_mp.png`](./images/mot_Diemt_toi_1_mp.png)
-- [`Tinh_goc_giua_hai_duong_thang.png`](./images/Tinh_goc_giua_hai_duong_thang.png)
